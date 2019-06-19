@@ -1,0 +1,32 @@
+{{#partial "content"}}
+<div class="jumbotron text-center home-head">
+        <h1 class="text-center">Arnold's Blog</h1>
+        <p class="text-center start">Please take a few minutes to sign-up to enjoy most of our signed up user benefits</p>
+
+</div>
+
+    <section class="flex-center  ">
+        <div class="card col-md-6">
+            <form action="/welcome" class="form-horizontal card-body" method="post">
+                <div class="md-form form-sm ">
+                    <label for="username"></label>
+                    <input class="form-control form-control-sm" type="text" id="username" name="username" placeholder="Enter name" required>
+                </div>
+                <div class="md-form form-sm ">
+                    <label for="email"></label>
+                    <input class="form-control form-control-sm" type="text" id="email" name="email" placeholder="Enter email" required>
+                </div>
+                <div class="md-form form-sm ">
+                    <label for="password"></label>
+                    <input class="form-control form-control-sm" type="text" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                <button class="btn blue-gradient btn-block" type="submit">Submit</button>
+            </form>
+        </div>
+
+    </section>
+
+
+
+{{/partial}}
+{{>layout.hbs}}
