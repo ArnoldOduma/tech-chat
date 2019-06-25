@@ -15,6 +15,7 @@ public class App {
         staticFileLocation("/public");
 
         Post.setUpNewPost();
+        Post.setUpNewPost();
 
         get("/",(req,res) ->{
             Map<String, Object> model = new HashMap<>();
@@ -95,6 +96,11 @@ public class App {
             Post.deletePost(idOfPostToDelete);
             model.put("editPost",idOfPostToDelete);
             return new ModelAndView(model,"post.hbs");
+        }, new HandlebarsTemplateEngine());
+        get("/posts/delete", (req, res) ->{
+            Map<String, Object> model = new HashMap<>();
+            Post.clearAllPosts();
+            return new ModelAndView(model, "success.hbs");
         }, new HandlebarsTemplateEngine());
 
 

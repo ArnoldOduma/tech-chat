@@ -6,22 +6,19 @@
 
 
         {{#if posts}}
-            <h3 class="text-center">This are the posts</h3><br>
+            <h3 class="text-center">These are the posts</h3><br>
+            <section class="flex col-md-12">
             {{#each posts}}
-        <section class="flex flex-wrap flex-center">
-
-                <div class="card card-lg col-md-6">
-                    <p>Current post</p>
+                <div class="container card card-lg col-md-8">
+                    <p>Current post{{ createdAt }}</p>
                     <p>{{ content }}</p>
                     <p>{{ time }}</p>
-
                     <a href="/posts/{{ id }}/update">Update post</a>
                     <a href="/post/delete/{{id}}">DELETE this post (no undo)</a>
-
-                </div>
+                </div><br>
             {{/each}}
         {{else}}
-            <h3>Posts coming soon</h3>
+            <h3 class="jumbotron">Posts coming soon</h3>
             </section>
         {{/if}}
 
