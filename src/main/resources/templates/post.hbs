@@ -1,0 +1,34 @@
+{{#partial "styleLink"}}
+
+{{/partial}}
+{{#partial "content"}}
+
+
+
+        {{#if posts}}
+            <h3 class="text-center">This are the posts</h3><br>
+            {{#each posts}}
+        <section class="flex flex-wrap flex-center">
+
+                <div class="card card-lg col-md-6">
+                    <p>Current post</p>
+                    <p>{{ content }}</p>
+                    <p>{{ time }}</p>
+
+                    <a href="/posts/{{ id }}/update">Update post</a>
+                    <a href="/post/delete/{{id}}">DELETE this post (no undo)</a>
+
+                </div>
+            {{/each}}
+        {{else}}
+            <h3>Posts coming soon</h3>
+            </section>
+        {{/if}}
+
+
+
+
+
+
+{{/partial}}
+{{> layout.hbs}}

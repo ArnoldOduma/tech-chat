@@ -1,0 +1,18 @@
+{{#partial "content"}}
+    <div class="jumbotron text-center">
+        <h3>Post List</h3>
+    </div>
+
+    {{#if posts}}
+        {{#each posts}}
+            <p>{{ content }} <a href="/new/{{id}}"> Read more</a></p>
+
+
+        {{/each}}
+    {{else}}
+        <h3 class="text-center">Posts coming soon</h3>
+
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}

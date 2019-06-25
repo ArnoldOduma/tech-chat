@@ -2,15 +2,62 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!--    Bootstraps-->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/mdb.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Blog</title>
+    {{#block "styleLink"}}{{/block}}
+    <title>{{#block "title"}}Blog Home{{/block}}</title>
 </head>
 <body>
+    <!--Main Navigation-->
+<header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark indigo scrolling-navbar">
+    <a class="navbar-brand" href="/"><strong>Navbar</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/new">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/welcome">Welcome</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opinions</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fab fa-instagram"></i></a>
+        </li>
+      <li class="nav-item text-light text-capitalize">
+          <a class="nav-link"><i class="fas fa-user"></i> {{ username }}</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+<!--Main Navigation-->
 {{/block}}
 
-<section class="container">
+<section class="container-fluid">
     {{#block "content"}}
 
     {{/block}}

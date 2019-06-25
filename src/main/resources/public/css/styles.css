@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
-.home-head{
-    background-image: url('/img/adult-art.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-family: 'Abril Fatface', cursive;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.home-head p{
-
+h3{
+    font-family: 'Lobster', cursive;
 }

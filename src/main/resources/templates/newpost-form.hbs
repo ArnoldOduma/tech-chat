@@ -1,0 +1,19 @@
+{{#partial "content"}}
+    <h3 class="text-center text-capitalize jumbotron dark">Welcome {{ username }}</h3>
+    <section class="form-sec flex-center">
+        <form action="/posts/{{ editPost.id }}/update" class="form-horizontal col-md-6" method="post">
+            <div class="md-form form-sm ">
+                <label for="username"></label>
+                <!--                <input class="form-control form-control-sm" type="text" id="content" name="content"-->
+                <!--                       placeholder="En">-->
+                <input class="form-control form-control-sm" type="text" id="content1" name="content1"
+                          placeholder="Create a post" value="{{editPost.content}}" >
+            </div>
+            <button class="btn blue-gradient btn-block" type="submit">Post</button>
+        </form>
+    </section>
+
+{{/partial}}
+
+{{> layout.hbs}}
+
